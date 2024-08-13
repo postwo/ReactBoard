@@ -69,4 +69,4 @@ types = 각종 타입들 저장
 utils = 잡다한 유틸들
 views = 뷰(페이지)들 모음
 
-8부터 듣기
+# jwtprovider에서 test할때마다 넣기

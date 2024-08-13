@@ -14,7 +14,7 @@ import java.util.Date;
 @Component
 public class JwtProvider {
 
-    private String secretKey = "thisowpsispakisix";
+    private String secretKey = "";
 
     public String create(String email){
 
@@ -25,7 +25,7 @@ public class JwtProvider {
 
         String jwt = Jwts.builder()
                 .signWith(key, SignatureAlgorithm.HS256)
-                .setSubject(email) //JWT의 subject(주제) 필드에 사용자 ID를 설정
+                .setSubject(email) //JWT의 subject(주제) 필드에 사용자 email을 설정
                 .setIssuedAt(new Date()).setExpiration(expiredDate)  //JWT가 발행된 시간을 현재 시간으로 설정
                 .compact(); //JWT 문자열을 생성
         return jwt;
