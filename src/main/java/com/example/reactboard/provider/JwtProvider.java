@@ -3,6 +3,7 @@ package com.example.reactboard.provider;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
@@ -14,7 +15,8 @@ import java.util.Date;
 @Component
 public class JwtProvider {
 
-    private String secretKey = "";
+    @Value("${spring.jwt.secret-key}")
+    private String secretKey;
 
     public String create(String email){
 
