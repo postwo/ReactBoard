@@ -92,12 +92,13 @@ public class WebSecurityConfig {
 
 
 //여기서만 사용하는 클래스
+//인증 실패
 class FiledAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
        response.setContentType("application/json");
-       response.setStatus(HttpServletResponse.SC_FORBIDDEN);//권한없음
-        response.getWriter().write("{\"code\" : \"NP\" ,\"message\" : \"DO not have permission.\"}");
+       response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);//권한없음
+        response.getWriter().write("{\"code\" : \"AF\" ,\"message\" : \"Authorization Failed.\"}");
     }
 }
