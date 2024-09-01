@@ -19,7 +19,7 @@ public class SignUpRequestDto { // 프론트에서 받아오는 것들
     private String password;
 
     @NotBlank
-    @Pattern(regexp = "^[0-9]{11,13}$")
+//    @Pattern(regexp = "^[0-9]{11,13}$")
     private String nickname;
 
     private String telNumber;
