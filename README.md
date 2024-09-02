@@ -70,3 +70,9 @@ utils = 잡다한 유틸들
 views = 뷰(페이지)들 모음
 
 # jwtprovider에서 test할때마다 넣기
+
+# 프로젝트 erd 4,5 사진 첨부하기
+
+# 24강에 entity 작성
+
+# 25강부터 듣기
