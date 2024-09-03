@@ -1,6 +1,8 @@
 package com.example.reactboard.controller;
 
+import com.example.reactboard.dto.request.auth.SignInRequestDto;
 import com.example.reactboard.dto.request.auth.SignUpRequestDto;
+import com.example.reactboard.dto.response.auth.SignInResponseDto;
 import com.example.reactboard.dto.response.auth.SignUpResponseDto;
 import com.example.reactboard.service.AuthService;
 import jakarta.validation.Valid;
@@ -24,4 +26,12 @@ public class AuthController {
         ResponseEntity<? super SignUpResponseDto> response = authService.signUp(requestBody);
         return response;
     }
+
+    //로그인
+    @PostMapping("/sign-in")
+    public ResponseEntity<? super SignInResponseDto> signIn(@RequestBody @Valid SignInRequestDto requestBody){
+        ResponseEntity<? super SignInResponseDto> response = authService.signIn(requestBody);
+        return response;
+    }
+
 }

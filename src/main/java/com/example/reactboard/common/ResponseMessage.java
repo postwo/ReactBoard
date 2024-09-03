@@ -15,7 +15,7 @@ public interface ResponseMessage {
 
 
     //HTTP STATUS 401
-    String SIGN_IN_FAIL = "SF"; //로그인 실패
+    String SIGN_IN_FAIL = "Login information mismatch"; //로그인 실패
     String AUTHORIZATION_FAIL = "AF"; //인증 실패
 
 
