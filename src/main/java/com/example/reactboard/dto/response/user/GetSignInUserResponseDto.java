@@ -4,9 +4,11 @@ import com.example.reactboard.common.ResponseCode;
 import com.example.reactboard.common.ResponseMessage;
 import com.example.reactboard.dto.response.ResponseDto;
 import com.example.reactboard.entity.UserEntity;
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+@Getter
 public class GetSignInUserResponseDto extends ResponseDto {
 
     private String email;

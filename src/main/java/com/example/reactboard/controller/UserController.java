@@ -21,7 +21,6 @@ public class UserController {
             @AuthenticationPrincipal String email
     ){
         ResponseEntity<? super GetSignInUserResponseDto> response = userService.getSignInUser(email);
-        System.out.println();
         return response;
     }
 
