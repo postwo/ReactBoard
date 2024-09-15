@@ -35,7 +35,7 @@ public class BoardEntity {
     private int viewCount;
 
     @ManyToOne
-    @JoinColumn(name = "writerEmail",nullable = false)
+    @JoinColumn(name = "writer_email",nullable = false)
     private UserEntity Email;
 
     // 게시판 내용 필요할때
