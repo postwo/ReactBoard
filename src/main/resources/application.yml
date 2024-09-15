@@ -10,7 +10,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update #create update none
+      ddl-auto: update  #create update none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
@@ -22,4 +22,9 @@ spring:
 
   jwt:
     secret-key: ${key}
+
+
+  file:
+    path: C:/file/upload/
+    url: http://localhost:4000/file/
 
